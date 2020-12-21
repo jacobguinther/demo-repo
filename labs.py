@@ -1,2 +1,2 @@
 def GetModels():
-  print("{'models':['modelA', 'modelB', 'modelC']}")
+  print("ModelA,ModelB,ModelC")
