@@ -1,2 +1,2 @@
-def Test():
-  print("Test!")
+def GetModels():
+  print("{'models':['modelA', 'modelB', 'modelC']}")
