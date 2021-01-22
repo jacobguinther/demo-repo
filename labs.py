@@ -8,7 +8,7 @@ from cadCAD.configuration.utils import filter_jobs
 exp.model_ids
 
 # mocking UI input
-model_filter = ['sys_model_1', 'sys_model_2', 'sys_model_3']
+model_filter = ['sys_model_1', 'sys_model_2']
 
 # Artifact 2: cadCAD.configuration.utils.filter_jobs
 client_modules = [config1, config2] # I believe i can auto append module.__name__ with exp.append_model / _config
@@ -21,4 +21,4 @@ filtered_jobs, filtered_jobs_lens, renamed_client_modules, exp = filter_jobs(
 )
 
 def GetModels():
-  print(",".join(model_filter))
+  print(",".join(model_ids))
