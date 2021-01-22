@@ -1,0 +1,10 @@
+# Next Steps:
+# A: exp is updated with server_module (via method) which triggers job ser
+# B: re_assign_modules in exp before serialization [exp.ser_flattened_configs (jobs)]
+# C: re_assign_modules(exp.configs): exp.configs - of all jobs given exp.configs
+# D: re_assign_modules[EVERYTHING]
+# Alt:
+# * Create Configuration member to hold local vars
+# * rename their modules [re_assign_modules(exp.configs)]
+# * cadCAD/engine/simulation.py - generate_record:
+# ** mod _input OR add additional_objs to include client vars (_input[var] OR additional_objs[var])
