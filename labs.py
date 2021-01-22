@@ -19,6 +19,3 @@ filtered_jobs, filtered_jobs_lens, renamed_client_modules, exp = filter_jobs(
     server_module=server_module, # exp is updated with this (via method) which triggers job ser
     model_ids=model_filter # mocking UI input
 )
-
-def GetModels():
-  print(",".join(exp.model_ids))
