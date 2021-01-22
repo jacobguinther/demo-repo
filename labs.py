@@ -21,4 +21,4 @@ filtered_jobs, filtered_jobs_lens, renamed_client_modules, exp = filter_jobs(
 )
 
 def GetModels():
-  print(",".join(model_ids))
+  print(",".join(exp.model_ids))
