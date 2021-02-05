@@ -138,7 +138,7 @@ partial_state_update_blocks = [
 ]
 
 sim_config_dict = {
-        "N": 3,
+        "N": 250,
         "T": range(5),
 }
 
