@@ -160,7 +160,7 @@ partial_state_update_blocks = [
 
 
 sim_config_dict = {
-        "N": 750,
+        "N": 7,
         "T": range(5)
     }
 
@@ -173,49 +173,3 @@ exp.append_model(
     env_processes=env_processes,
     partial_state_update_blocks=partial_state_update_blocks
 )
-#
-# class Struct:
-#     def __init__(self, **entries):
-#         self.__dict__.update(entries)
-#
-# job = exp.configs[0]
-# ser_job = exp.ser_flattened_configs[0]
-# psub_struct = deepcopy(Struct(**job.partial_state_update_blocks[0]))
-
-# +++++
-# print(psub_struct.__dict__)
-# ser_psubs = dill.dumps(partial_state_update_blocks)
-# encoded_psubs = codecs.encode(ser_psubs, "base64").decode()
-# json_obj = {
-#     "partial_state_update_blocks": encoded_psubs
-# }
-
-# url = 'http://0.0.0.0:5000'
-# job = exp.configs[0]
-# pickled_encoded_job = codecs.encode(dill.dumps(job), "base64").decode()
-# r = requests.post(f'{url}/job', json={'job': pickled_encoded_job})
-# print(r.text)
-# print()
-
-# jobs = deepcopy(exp.configs)
-#
-# url = 'http://0.0.0.0:5000'
-# # print(type(jobs[0]))
-# # exit()
-# dill.detect.trace(True)
-#
-# print()
-# job = jobs[0]
-# job_dict = job.__dict__
-#
-# # help(job)
-# # print(job.__slotnames__)
-# # exit()
-#
-# r = requests.post(f'{url}/psubs', json={
-#         "partial_state_update_blocks": codecs.encode(dill.dumps(job.partial_state_update_blocks), "base64").decode()
-#     }
-# )
-#
-# print(r.text)
-# print()
